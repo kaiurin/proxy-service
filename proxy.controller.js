@@ -3,6 +3,8 @@ const proxy = require('./proxy.service');
 
 const interval = 1000; //300000
 
+fastify.register(require('fastify-cors'));
+
 fastify.get('/btcusd', proxy.getBtcUsdtInfo);
 fastify.get('/gbytebtc', proxy.getGbyteBtcInfo);
 
